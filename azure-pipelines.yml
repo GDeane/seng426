@@ -46,8 +46,8 @@ jobs:
   steps:
   - task: Docker@2
     inputs:
-      containerRegistry: 'DocHubBack' 
-      repository: 'xxx/yyy.back'
+      containerRegistry: 'dockerseng426backend' 
+      repository: 'gdeane/seng426backend'
       command: 'buildAndPush'
       Dockerfile: 'crypto-back/Dockerfile'
       tags: 'latest'
@@ -55,8 +55,8 @@ jobs:
 
   - task: Docker@2
     inputs:
-      containerRegistry: 'DocHubFront' 
-      repository: 'xxx/zzz.front'
+      containerRegistry: 'dockerseng426frontend' 
+      repository: 'gdeane/seng426frontend'
       command: 'buildAndPush'
       Dockerfile: 'UCryptPortal/Dockerfile'
       tags: 'latest'
